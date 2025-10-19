@@ -69,29 +69,29 @@ function App() {
 
   const openFriendModal = async (friend) => {
   setSelectedFriend(friend);
-  setCurrentPhotoIndex(0);
+  setCurrentMediaIndex(0);
   await fetchComments(friend.id);
 };
 
   const closeFriendModal = () => {
     setSelectedFriend(null);
-    setCurrentPhotoIndex(0);
+    setCurrentMediaIndex(0);
     setComments([]);
     setNewComment("");
   };
 
-  const nextPhoto = () => {
+  const nextMedia = () => {
     if (selectedFriend) {
-      setCurrentPhotoIndex((prev) => 
-        (prev + 1) % selectedFriend.photos.length
+      setCurrentMediaIndex((prev) => 
+        (prev + 1) % selectedFriend.media.length
       );
     }
   };
 
-  const prevPhoto = () => {
+  const prevMedia = () => {
     if (selectedFriend) {
-      setCurrentPhotoIndex((prev) => 
-        prev === 0 ? selectedFriend.photos.length - 1 : prev - 1
+      setCurrentMediaIndex((prev) => 
+        prev === 0 ? selectedFriend.media.length - 1 : prev - 1
       );
     }
   };
