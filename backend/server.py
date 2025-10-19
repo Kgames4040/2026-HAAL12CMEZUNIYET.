@@ -1,72 +1,129 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
-from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
-from typing import List
-import uuid
+from pydantic import BaseModel
+from typing import List, Optional
 from datetime import datetime, timezone
-
+import json
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-# MongoDB connection
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+# JSON file paths
+FRIENDS_FILE = ROOT_DIR / 'data' / 'friends.json'
+CODES_FILE = ROOT_DIR / 'data' / 'codes.json'
+COMMENTS_FILE = ROOT_DIR / 'data' / 'comments.json'
 
-# Create the main app without a prefix
+# Ensure data directory exists
+(ROOT_DIR / 'data').mkdir(exist_ok=True)
+
+# Initialize JSON files if they don't exist
+if not FRIENDS_FILE.exists():
+    friends_data = [
+        {"id": i, "name": f"Friend {i}", "photos": [
+            f"https://picsum.photos/seed/{i}-1/400/600",
+            f"https://picsum.photos/seed/{i}-2/400/600",
+            f"https://picsum.photos/seed/{i}-3/400/600"
+        ]} for i in range(1, 21)
+    ]
+    FRIENDS_FILE.write_text(json.dumps(friends_data, indent=2))
+
+if not CODES_FILE.exists():
+    codes_data = {
+        f"CODE{i:03d}": f"Student {i}" for i in range(1, 21)
+    }
+    CODES_FILE.write_text(json.dumps(codes_data, indent=2))
+
+if not COMMENTS_FILE.exists():
+    COMMENTS_FILE.write_text(json.dumps([], indent=2))
+
+# Create the main app
 app = FastAPI()
-
-# Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
+# Models
+class LoginRequest(BaseModel):
+    code: str
 
-# Define Models
-class StatusCheck(BaseModel):
-    model_config = ConfigDict(extra="ignore")  # Ignore MongoDB's _id field
-    
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    client_name: str
-    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+class LoginResponse(BaseModel):
+    success: bool
+    username: Optional[str] = None
+    message: str
 
-class StatusCheckCreate(BaseModel):
-    client_name: str
+class Friend(BaseModel):
+    id: int
+    name: str
+    photos: List[str]
 
-# Add your routes to the router instead of directly to app
+class CommentCreate(BaseModel):
+    friend_id: int
+    username: str
+    comment: str
+
+class Comment(BaseModel):
+    friend_id: int
+    username: str
+    comment: str
+    date: str
+
+# Helper functions
+def load_json(file_path):
+    with open(file_path, 'r') as f:
+        return json.load(f)
+
+def save_json(file_path, data):
+    with open(file_path, 'w') as f:
+        json.dump(data, f, indent=2)
+
+# Routes
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Yearbook Memory API"}
 
-@api_router.post("/status", response_model=StatusCheck)
-async def create_status_check(input: StatusCheckCreate):
-    status_dict = input.model_dump()
-    status_obj = StatusCheck(**status_dict)
-    
-    # Convert to dict and serialize datetime to ISO string for MongoDB
-    doc = status_obj.model_dump()
-    doc['timestamp'] = doc['timestamp'].isoformat()
-    
-    _ = await db.status_checks.insert_one(doc)
-    return status_obj
+@api_router.get("/friends", response_model=List[Friend])
+async def get_friends():
+    friends = load_json(FRIENDS_FILE)
+    return friends
 
-@api_router.get("/status", response_model=List[StatusCheck])
-async def get_status_checks():
-    # Exclude MongoDB's _id field from the query results
-    status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
-    
-    # Convert ISO string timestamps back to datetime objects
-    for check in status_checks:
-        if isinstance(check['timestamp'], str):
-            check['timestamp'] = datetime.fromisoformat(check['timestamp'])
-    
-    return status_checks
+@api_router.post("/login", response_model=LoginResponse)
+async def login(request: LoginRequest):
+    codes = load_json(CODES_FILE)
+    if request.code in codes:
+        return LoginResponse(
+            success=True,
+            username=codes[request.code],
+            message="Login successful"
+        )
+    return LoginResponse(
+        success=False,
+        message="Invalid code"
+    )
 
-# Include the router in the main app
+@api_router.get("/comments/{friend_id}", response_model=List[Comment])
+async def get_comments(friend_id: int):
+    comments = load_json(COMMENTS_FILE)
+    friend_comments = [c for c in comments if c['friend_id'] == friend_id]
+    return friend_comments
+
+@api_router.post("/comments", response_model=Comment)
+async def add_comment(comment_data: CommentCreate):
+    comments = load_json(COMMENTS_FILE)
+    
+    new_comment = {
+        "friend_id": comment_data.friend_id,
+        "username": comment_data.username,
+        "comment": comment_data.comment,
+        "date": datetime.now(timezone.utc).isoformat()
+    }
+    
+    comments.append(new_comment)
+    save_json(COMMENTS_FILE, comments)
+    
+    return Comment(**new_comment)
+
 app.include_router(api_router)
 
 app.add_middleware(
@@ -77,13 +134,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
-
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    client.close()

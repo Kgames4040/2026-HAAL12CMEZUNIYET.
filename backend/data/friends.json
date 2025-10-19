@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Friend 1",
+    "photos": [
+      "https://picsum.photos/seed/1-1/400/600",
+      "https://picsum.photos/seed/1-2/400/600",
+      "https://picsum.photos/seed/1-3/400/600"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Friend 2",
+    "photos": [
+      "https://picsum.photos/seed/2-1/400/600",
+      "https://picsum.photos/seed/2-2/400/600",
+      "https://picsum.photos/seed/2-3/400/600"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Friend 3",
+    "photos": [
+      "https://picsum.photos/seed/3-1/400/600",
+      "https://picsum.photos/seed/3-2/400/600",
+      "https://picsum.photos/seed/3-3/400/600"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Friend 4",
+    "photos": [
+      "https://picsum.photos/seed/4-1/400/600",
+      "https://picsum.photos/seed/4-2/400/600",
+      "https://picsum.photos/seed/4-3/400/600"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Friend 5",
+    "photos": [
+      "https://picsum.photos/seed/5-1/400/600",
+      "https://picsum.photos/seed/5-2/400/600",
+      "https://picsum.photos/seed/5-3/400/600"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Friend 6",
+    "photos": [
+      "https://picsum.photos/seed/6-1/400/600",
+      "https://picsum.photos/seed/6-2/400/600",
+      "https://picsum.photos/seed/6-3/400/600"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Friend 7",
+    "photos": [
+      "https://picsum.photos/seed/7-1/400/600",
+      "https://picsum.photos/seed/7-2/400/600",
+      "https://picsum.photos/seed/7-3/400/600"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Friend 8",
+    "photos": [
+      "https://picsum.photos/seed/8-1/400/600",
+      "https://picsum.photos/seed/8-2/400/600",
+      "https://picsum.photos/seed/8-3/400/600"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Friend 9",
+    "photos": [
+      "https://picsum.photos/seed/9-1/400/600",
+      "https://picsum.photos/seed/9-2/400/600",
+      "https://picsum.photos/seed/9-3/400/600"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Friend 10",
+    "photos": [
+      "https://picsum.photos/seed/10-1/400/600",
+      "https://picsum.photos/seed/10-2/400/600",
+      "https://picsum.photos/seed/10-3/400/600"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Friend 11",
+    "photos": [
+      "https://picsum.photos/seed/11-1/400/600",
+      "https://picsum.photos/seed/11-2/400/600",
+      "https://picsum.photos/seed/11-3/400/600"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Friend 12",
+    "photos": [
+      "https://picsum.photos/seed/12-1/400/600",
+      "https://picsum.photos/seed/12-2/400/600",
+      "https://picsum.photos/seed/12-3/400/600"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Friend 13",
+    "photos": [
+      "https://picsum.photos/seed/13-1/400/600",
+      "https://picsum.photos/seed/13-2/400/600",
+      "https://picsum.photos/seed/13-3/400/600"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Friend 14",
+    "photos": [
+      "https://picsum.photos/seed/14-1/400/600",
+      "https://picsum.photos/seed/14-2/400/600",
+      "https://picsum.photos/seed/14-3/400/600"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Friend 15",
+    "photos": [
+      "https://picsum.photos/seed/15-1/400/600",
+      "https://picsum.photos/seed/15-2/400/600",
+      "https://picsum.photos/seed/15-3/400/600"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Friend 16",
+    "photos": [
+      "https://picsum.photos/seed/16-1/400/600",
+      "https://picsum.photos/seed/16-2/400/600",
+      "https://picsum.photos/seed/16-3/400/600"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Friend 17",
+    "photos": [
+      "https://picsum.photos/seed/17-1/400/600",
+      "https://picsum.photos/seed/17-2/400/600",
+      "https://picsum.photos/seed/17-3/400/600"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Friend 18",
+    "photos": [
+      "https://picsum.photos/seed/18-1/400/600",
+      "https://picsum.photos/seed/18-2/400/600",
+      "https://picsum.photos/seed/18-3/400/600"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Friend 19",
+    "photos": [
+      "https://picsum.photos/seed/19-1/400/600",
+      "https://picsum.photos/seed/19-2/400/600",
+      "https://picsum.photos/seed/19-3/400/600"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Friend 20",
+    "photos": [
+      "https://picsum.photos/seed/20-1/400/600",
+      "https://picsum.photos/seed/20-2/400/600",
+      "https://picsum.photos/seed/20-3/400/600"
+    ]
+  }
+]
