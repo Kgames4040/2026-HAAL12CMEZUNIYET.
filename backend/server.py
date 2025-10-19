@@ -22,31 +22,59 @@ COMMENTS_FILE = ROOT_DIR / 'data' / 'comments.json'
 
 # Initialize JSON files if they don't exist
 if not FRIENDS_FILE.exists():
-    quotes = [
-        "Best memories ever!", "Always there for me", "Class clown 🎉", 
-        "Study buddy for life", "Forever friends", "Never stop laughing",
-        "Always smiling", "Most likely to succeed", "Party starter",
-        "Book worm", "Sports star", "Future leader", "Creative genius",
-        "Music lover", "Tech wizard", "Drama queen/king", "Artist at heart",
-        "Fashionista", "Adventurer", "Life of the party"
+    descriptions = [
+        "The most amazing friend who always knows how to make everyone laugh. Best memories from our road trips together!",
+        "My study partner through thick and thin. Couldn't have survived finals without you. Here's to many more late-night study sessions!",
+        "Class clown and party starter! 🎉 You made every boring day fun. Never change your amazing energy!",
+        "The most talented artist I know. Your creativity inspires everyone around you. Can't wait to see where life takes you!",
+        "Future CEO in the making! Your determination and leadership skills are unmatched. Sky's the limit for you!",
+        "Sports champion and team player! Your dedication on the field taught us all what true commitment means.",
+        "Music genius! Every time you played, we all stopped to listen. Keep following your passion!",
+        "The kindest soul with the biggest heart. You were always there when anyone needed help. Thank you for being you!",
+        "Tech wizard who saved all our computers! Your coding skills are incredible. See you at Silicon Valley!",
+        "Drama star! Your performances were absolutely breathtaking. Broadway is calling your name!",
+        "Fashionista with impeccable style! You showed us how to express ourselves through fashion. Stay fabulous!",
+        "Book lover and intellectual! Our deep conversations about life and literature will stay with me forever.",
+        "Adventure seeker! From hiking trips to spontaneous road trips, you taught us to live life to the fullest!",
+        "The photographer who captured all our best moments. Your eye for beauty is truly special.",
+        "Future scientist! Your curiosity and analytical mind will change the world. We believe in you!",
+        "The chef who made every potluck amazing! Your culinary skills are restaurant-worthy. Bon appétit!",
+        "Gaming champion! Thanks for all the epic gaming sessions and teaching us strategy and teamwork.",
+        "Environmental warrior! Your passion for saving the planet inspired us all to do better. Keep fighting!",
+        "The poet with a way with words. Your beautiful writing touched our hearts. Never stop creating!",
+        "Ultimate friend who brought us all together. You created a family out of strangers. Forever grateful! ❤️"
+    ]
+    
+    # Sample videos that actually work
+    video_urls = [
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
     ]
     
     friends_data = []
     for i in range(1, 21):
         media = [
-            {"type": "image", "url": f"https://picsum.photos/seed/{i}-1/800/1200"},
-            {"type": "image", "url": f"https://picsum.photos/seed/{i}-2/800/1200"},
+            {"type": "image", "url": f"https://picsum.photos/seed/student{i}-1/800/1200"},
+            {"type": "image", "url": f"https://picsum.photos/seed/student{i}-2/800/1200"},
         ]
-        # Add a video for every 3rd friend
+        # Add a video for every 3rd friend with variety
         if i % 3 == 0:
-            media.append({"type": "video", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"})
+            video_index = (i // 3 - 1) % len(video_urls)
+            media.append({"type": "video", "url": video_urls[video_index]})
         else:
-            media.append({"type": "image", "url": f"https://picsum.photos/seed/{i}-3/800/1200"})
+            media.append({"type": "image", "url": f"https://picsum.photos/seed/student{i}-3/800/1200"})
+        
+        # Some friends get an extra image
+        if i % 5 == 0:
+            media.append({"type": "image", "url": f"https://picsum.photos/seed/student{i}-4/800/1200"})
         
         friends_data.append({
             "id": i,
-            "name": f"Friend {i}",
-            "quote": quotes[i-1],
+            "name": f"Alex Johnson" if i == 1 else f"Student {i}",
+            "quote": descriptions[i-1],
             "media": media
         })
     
