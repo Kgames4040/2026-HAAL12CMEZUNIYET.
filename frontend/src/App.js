@@ -81,7 +81,7 @@ function App() {
   };
 
   const nextMedia = () => {
-    if (selectedFriend) {
+    if (selectedFriend && selectedFriend.media && selectedFriend.media.length > 0) {
       setCurrentMediaIndex((prev) => 
         (prev + 1) % selectedFriend.media.length
       );
@@ -89,7 +89,7 @@ function App() {
   };
 
   const prevMedia = () => {
-    if (selectedFriend) {
+    if (selectedFriend && selectedFriend.media && selectedFriend.media.length > 0) {
       setCurrentMediaIndex((prev) => 
         prev === 0 ? selectedFriend.media.length - 1 : prev - 1
       );
