@@ -233,26 +233,37 @@ function App() {
             </button>
             
             <div className="modal-content">
-              {/* Photo Carousel */}
+              {/* Media Carousel */}
               <div className="photo-section">
                 <div className="photo-carousel">
                   <button 
-                    onClick={prevPhoto} 
+                    onClick={prevMedia} 
                     className="carousel-btn prev"
                     data-testid="prev-photo-button"
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
                   
-                  <img 
-                    src={selectedFriend.photos[currentPhotoIndex]} 
-                    alt={selectedFriend.name}
-                    className="carousel-image"
-                    data-testid="carousel-image"
-                  />
+                  {selectedFriend.media[currentMediaIndex].type === "video" ? (
+                    <video 
+                      src={selectedFriend.media[currentMediaIndex].url}
+                      className="carousel-image"
+                      data-testid="carousel-video"
+                      controls
+                      autoPlay
+                      loop
+                    />
+                  ) : (
+                    <img 
+                      src={selectedFriend.media[currentMediaIndex].url} 
+                      alt={selectedFriend.name}
+                      className="carousel-image"
+                      data-testid="carousel-image"
+                    />
+                  )}
                   
                   <button 
-                    onClick={nextPhoto} 
+                    onClick={nextMedia} 
                     className="carousel-btn next"
                     data-testid="next-photo-button"
                   >
@@ -261,10 +272,10 @@ function App() {
                 </div>
                 
                 <div className="photo-indicators">
-                  {selectedFriend.photos.map((_, index) => (
+                  {selectedFriend.media.map((_, index) => (
                     <div 
                       key={index}
-                      className={`indicator ${index === currentPhotoIndex ? 'active' : ''}`}
+                      className={`indicator ${index === currentMediaIndex ? 'active' : ''}`}
                     />
                   ))}
                 </div>
@@ -273,6 +284,7 @@ function App() {
               {/* Comments Section */}
               <div className="comments-section">
                 <h3 className="comments-title">{selectedFriend.name}</h3>
+                <p className="friend-quote" data-testid="friend-quote">{selectedFriend.quote}</p>
                 
                 <div className="comments-list" data-testid="comments-list">
                   {comments.length === 0 ? (
