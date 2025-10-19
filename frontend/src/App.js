@@ -187,7 +187,7 @@ function App() {
           >
             <div className="friend-image-container">
               <img 
-                src={friend.photos[0]} 
+                src={friend.media[0].url} 
                 alt={friend.name}
                 className="friend-image"
               />
