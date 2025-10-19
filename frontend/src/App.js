@@ -246,22 +246,24 @@ function App() {
                     <ChevronLeft className="w-6 h-6" />
                   </button>
                   
-                  {selectedFriend.media[currentMediaIndex].type === "video" ? (
-                    <video 
-                      src={selectedFriend.media[currentMediaIndex].url}
-                      className="carousel-image"
-                      data-testid="carousel-video"
-                      controls
-                      autoPlay
-                      loop
-                    />
-                  ) : (
-                    <img 
-                      src={selectedFriend.media[currentMediaIndex].url} 
-                      alt={selectedFriend.name}
-                      className="carousel-image"
-                      data-testid="carousel-image"
-                    />
+                  {selectedFriend.media && selectedFriend.media[currentMediaIndex] && (
+                    selectedFriend.media[currentMediaIndex].type === "video" ? (
+                      <video 
+                        src={selectedFriend.media[currentMediaIndex].url}
+                        className="carousel-image"
+                        data-testid="carousel-video"
+                        controls
+                        autoPlay
+                        loop
+                      />
+                    ) : (
+                      <img 
+                        src={selectedFriend.media[currentMediaIndex].url} 
+                        alt={selectedFriend.name}
+                        className="carousel-image"
+                        data-testid="carousel-image"
+                      />
+                    )
                   )}
                   
                   <button 
@@ -274,7 +276,7 @@ function App() {
                 </div>
                 
                 <div className="photo-indicators">
-                  {selectedFriend.media.map((_, index) => (
+                  {selectedFriend.media && selectedFriend.media.map((_, index) => (
                     <div 
                       key={index}
                       className={`indicator ${index === currentMediaIndex ? 'active' : ''}`}
