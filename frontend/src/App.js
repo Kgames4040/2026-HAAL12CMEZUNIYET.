@@ -186,11 +186,13 @@ function App() {
             data-testid={`friend-card-${friend.id}`}
           >
             <div className="friend-image-container">
-              <img 
-                src={friend.media[0].url} 
-                alt={friend.name}
-                className="friend-image"
-              />
+              {friend.media && friend.media.length > 0 && (
+                <img 
+                  src={friend.media[0].url} 
+                  alt={friend.name}
+                  className="friend-image"
+                />
+              )}
             </div>
             <h3 className="friend-name">{friend.name}</h3>
           </div>
