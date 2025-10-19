@@ -22,13 +22,34 @@ COMMENTS_FILE = ROOT_DIR / 'data' / 'comments.json'
 
 # Initialize JSON files if they don't exist
 if not FRIENDS_FILE.exists():
-    friends_data = [
-        {"id": i, "name": f"Friend {i}", "photos": [
-            f"https://picsum.photos/seed/{i}-1/400/600",
-            f"https://picsum.photos/seed/{i}-2/400/600",
-            f"https://picsum.photos/seed/{i}-3/400/600"
-        ]} for i in range(1, 21)
+    quotes = [
+        "Best memories ever!", "Always there for me", "Class clown 🎉", 
+        "Study buddy for life", "Forever friends", "Never stop laughing",
+        "Always smiling", "Most likely to succeed", "Party starter",
+        "Book worm", "Sports star", "Future leader", "Creative genius",
+        "Music lover", "Tech wizard", "Drama queen/king", "Artist at heart",
+        "Fashionista", "Adventurer", "Life of the party"
     ]
+    
+    friends_data = []
+    for i in range(1, 21):
+        media = [
+            {"type": "image", "url": f"https://picsum.photos/seed/{i}-1/800/1200"},
+            {"type": "image", "url": f"https://picsum.photos/seed/{i}-2/800/1200"},
+        ]
+        # Add a video for every 3rd friend
+        if i % 3 == 0:
+            media.append({"type": "video", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"})
+        else:
+            media.append({"type": "image", "url": f"https://picsum.photos/seed/{i}-3/800/1200"})
+        
+        friends_data.append({
+            "id": i,
+            "name": f"Friend {i}",
+            "quote": quotes[i-1],
+            "media": media
+        })
+    
     FRIENDS_FILE.write_text(json.dumps(friends_data, indent=2))
 
 if not CODES_FILE.exists():
