@@ -437,9 +437,29 @@ body {
   
   .modal-content {
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  
+  .photo-section {
+    max-height: 40vh;
+    min-height: 300px;
+  }
+  
+  .carousel-image {
+    max-height: calc(40vh - 60px);
   }
   
   .comments-section {
+    min-height: 45vh;
     max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .comments-list {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 200px;
+    -webkit-overflow-scrolling: touch;
   }
 }
