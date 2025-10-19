@@ -16,7 +16,7 @@ function App() {
   const [showSplash, setShowSplash] = useState(true);
   const [friends, setFriends] = useState([]);
   const [selectedFriend, setSelectedFriend] = useState(null);
-  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
   const [comments, setComments] = useState([]);
   const [showLogin, setShowLogin] = useState(false);
   const [loginCode, setLoginCode] = useState("");
