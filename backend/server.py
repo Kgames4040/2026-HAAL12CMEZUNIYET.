@@ -74,10 +74,15 @@ class LoginResponse(BaseModel):
     username: Optional[str] = None
     message: str
 
+class Media(BaseModel):
+    type: str  # "image" or "video"
+    url: str
+
 class Friend(BaseModel):
     id: int
     name: str
-    photos: List[str]
+    quote: str
+    media: List[Media]
 
 class CommentCreate(BaseModel):
     friend_id: int
