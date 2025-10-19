@@ -261,6 +261,8 @@ body {
 .carousel-image {
   max-width: 100%;
   max-height: calc(90vh - 60px);
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
