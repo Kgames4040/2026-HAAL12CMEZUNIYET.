@@ -336,11 +336,15 @@ body {
 
 .friend-quote {
   font-size: 0.95rem;
-  color: #7f8c8d;
+  color: #495057;
   font-style: italic;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
+  padding: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #e9ecef;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
 }
 
 .comments-list {
