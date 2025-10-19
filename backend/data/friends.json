@@ -2,181 +2,381 @@
   {
     "id": 1,
     "name": "Friend 1",
-    "photos": [
-      "https://picsum.photos/seed/1-1/400/600",
-      "https://picsum.photos/seed/1-2/400/600",
-      "https://picsum.photos/seed/1-3/400/600"
+    "quote": "Best memories ever!",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/1-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/1-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/1-3/800/1200"
+      }
     ]
   },
   {
     "id": 2,
     "name": "Friend 2",
-    "photos": [
-      "https://picsum.photos/seed/2-1/400/600",
-      "https://picsum.photos/seed/2-2/400/600",
-      "https://picsum.photos/seed/2-3/400/600"
+    "quote": "Always there for me",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/2-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/2-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/2-3/800/1200"
+      }
     ]
   },
   {
     "id": 3,
     "name": "Friend 3",
-    "photos": [
-      "https://picsum.photos/seed/3-1/400/600",
-      "https://picsum.photos/seed/3-2/400/600",
-      "https://picsum.photos/seed/3-3/400/600"
+    "quote": "Class clown \ud83c\udf89",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/3-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/3-2/800/1200"
+      },
+      {
+        "type": "video",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      }
     ]
   },
   {
     "id": 4,
     "name": "Friend 4",
-    "photos": [
-      "https://picsum.photos/seed/4-1/400/600",
-      "https://picsum.photos/seed/4-2/400/600",
-      "https://picsum.photos/seed/4-3/400/600"
+    "quote": "Study buddy for life",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/4-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/4-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/4-3/800/1200"
+      }
     ]
   },
   {
     "id": 5,
     "name": "Friend 5",
-    "photos": [
-      "https://picsum.photos/seed/5-1/400/600",
-      "https://picsum.photos/seed/5-2/400/600",
-      "https://picsum.photos/seed/5-3/400/600"
+    "quote": "Forever friends",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/5-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/5-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/5-3/800/1200"
+      }
     ]
   },
   {
     "id": 6,
     "name": "Friend 6",
-    "photos": [
-      "https://picsum.photos/seed/6-1/400/600",
-      "https://picsum.photos/seed/6-2/400/600",
-      "https://picsum.photos/seed/6-3/400/600"
+    "quote": "Never stop laughing",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/6-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/6-2/800/1200"
+      },
+      {
+        "type": "video",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      }
     ]
   },
   {
     "id": 7,
     "name": "Friend 7",
-    "photos": [
-      "https://picsum.photos/seed/7-1/400/600",
-      "https://picsum.photos/seed/7-2/400/600",
-      "https://picsum.photos/seed/7-3/400/600"
+    "quote": "Always smiling",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/7-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/7-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/7-3/800/1200"
+      }
     ]
   },
   {
     "id": 8,
     "name": "Friend 8",
-    "photos": [
-      "https://picsum.photos/seed/8-1/400/600",
-      "https://picsum.photos/seed/8-2/400/600",
-      "https://picsum.photos/seed/8-3/400/600"
+    "quote": "Most likely to succeed",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/8-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/8-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/8-3/800/1200"
+      }
     ]
   },
   {
     "id": 9,
     "name": "Friend 9",
-    "photos": [
-      "https://picsum.photos/seed/9-1/400/600",
-      "https://picsum.photos/seed/9-2/400/600",
-      "https://picsum.photos/seed/9-3/400/600"
+    "quote": "Party starter",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/9-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/9-2/800/1200"
+      },
+      {
+        "type": "video",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      }
     ]
   },
   {
     "id": 10,
     "name": "Friend 10",
-    "photos": [
-      "https://picsum.photos/seed/10-1/400/600",
-      "https://picsum.photos/seed/10-2/400/600",
-      "https://picsum.photos/seed/10-3/400/600"
+    "quote": "Book worm",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/10-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/10-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/10-3/800/1200"
+      }
     ]
   },
   {
     "id": 11,
     "name": "Friend 11",
-    "photos": [
-      "https://picsum.photos/seed/11-1/400/600",
-      "https://picsum.photos/seed/11-2/400/600",
-      "https://picsum.photos/seed/11-3/400/600"
+    "quote": "Sports star",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/11-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/11-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/11-3/800/1200"
+      }
     ]
   },
   {
     "id": 12,
     "name": "Friend 12",
-    "photos": [
-      "https://picsum.photos/seed/12-1/400/600",
-      "https://picsum.photos/seed/12-2/400/600",
-      "https://picsum.photos/seed/12-3/400/600"
+    "quote": "Future leader",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/12-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/12-2/800/1200"
+      },
+      {
+        "type": "video",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      }
     ]
   },
   {
     "id": 13,
     "name": "Friend 13",
-    "photos": [
-      "https://picsum.photos/seed/13-1/400/600",
-      "https://picsum.photos/seed/13-2/400/600",
-      "https://picsum.photos/seed/13-3/400/600"
+    "quote": "Creative genius",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/13-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/13-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/13-3/800/1200"
+      }
     ]
   },
   {
     "id": 14,
     "name": "Friend 14",
-    "photos": [
-      "https://picsum.photos/seed/14-1/400/600",
-      "https://picsum.photos/seed/14-2/400/600",
-      "https://picsum.photos/seed/14-3/400/600"
+    "quote": "Music lover",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/14-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/14-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/14-3/800/1200"
+      }
     ]
   },
   {
     "id": 15,
     "name": "Friend 15",
-    "photos": [
-      "https://picsum.photos/seed/15-1/400/600",
-      "https://picsum.photos/seed/15-2/400/600",
-      "https://picsum.photos/seed/15-3/400/600"
+    "quote": "Tech wizard",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/15-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/15-2/800/1200"
+      },
+      {
+        "type": "video",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      }
     ]
   },
   {
     "id": 16,
     "name": "Friend 16",
-    "photos": [
-      "https://picsum.photos/seed/16-1/400/600",
-      "https://picsum.photos/seed/16-2/400/600",
-      "https://picsum.photos/seed/16-3/400/600"
+    "quote": "Drama queen/king",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/16-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/16-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/16-3/800/1200"
+      }
     ]
   },
   {
     "id": 17,
     "name": "Friend 17",
-    "photos": [
-      "https://picsum.photos/seed/17-1/400/600",
-      "https://picsum.photos/seed/17-2/400/600",
-      "https://picsum.photos/seed/17-3/400/600"
+    "quote": "Artist at heart",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/17-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/17-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/17-3/800/1200"
+      }
     ]
   },
   {
     "id": 18,
     "name": "Friend 18",
-    "photos": [
-      "https://picsum.photos/seed/18-1/400/600",
-      "https://picsum.photos/seed/18-2/400/600",
-      "https://picsum.photos/seed/18-3/400/600"
+    "quote": "Fashionista",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/18-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/18-2/800/1200"
+      },
+      {
+        "type": "video",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      }
     ]
   },
   {
     "id": 19,
     "name": "Friend 19",
-    "photos": [
-      "https://picsum.photos/seed/19-1/400/600",
-      "https://picsum.photos/seed/19-2/400/600",
-      "https://picsum.photos/seed/19-3/400/600"
+    "quote": "Adventurer",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/19-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/19-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/19-3/800/1200"
+      }
     ]
   },
   {
     "id": 20,
     "name": "Friend 20",
-    "photos": [
-      "https://picsum.photos/seed/20-1/400/600",
-      "https://picsum.photos/seed/20-2/400/600",
-      "https://picsum.photos/seed/20-3/400/600"
+    "quote": "Life of the party",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/20-1/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/20-2/800/1200"
+      },
+      {
+        "type": "image",
+        "url": "https://picsum.photos/seed/20-3/800/1200"
+      }
     ]
   }
 ]
