@@ -109,9 +109,9 @@ function App() {
       });
       setComments([...comments, response.data]);
       setNewComment("");
-      toast.success("Comment added!");
+      toast.success("Yorumunuz Eklendi");
     } catch (error) {
-      toast.error("Failed to add comment");
+      toast.error("Yorumunuz Eklenemedi");
     }
   };
 
