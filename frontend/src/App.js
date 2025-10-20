@@ -292,7 +292,7 @@ function App() {
                 {user && (
                   <div className="comment-input-section" data-testid="comment-input-section">
                     <Textarea 
-                      placeholder="Write your memory..."
+                      placeholder="Bu şahsiyet hakkında düşüncelerinizi yazın:)"
                       value={newComment}
                       onChange={(e) => setNewComment(e.target.value)}
                       className="comment-textarea"
@@ -303,7 +303,7 @@ function App() {
                       className="comment-submit-btn"
                       data-testid="comment-submit-button"
                     >
-                      Post Comment
+                      Yorumunu Ekle
                     </Button>
                   </div>
                 )}
