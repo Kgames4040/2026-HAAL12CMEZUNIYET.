@@ -214,7 +214,7 @@ function App() {
             className="login-submit-btn"
             data-testid="login-submit-button"
           >
-            Login
+            Giriş Yap
           </Button>
         </DialogContent>
       </Dialog>
